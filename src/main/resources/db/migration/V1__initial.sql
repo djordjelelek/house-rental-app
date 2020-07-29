@@ -11,7 +11,7 @@ CREATE TABLE landlord(
 	surname VARCHAR(255),
 	email VARCHAR(255),
 	password VARCHAR(255),
-	phoneNumber INTEGER
+	phone_number INTEGER
 );
 CREATE TABLE flat(
 	id UUID PRIMARY KEY NOT NULL,
@@ -20,12 +20,12 @@ CREATE TABLE flat(
 	neighborhood VARCHAR(255),
 	price INTEGER,
 	sqm INTEGER,
-	numberOfRooms INTEGER,
+	number_of_rooms INTEGER,
 	parking BOOLEAN,
-	airConditions BOOLEAN,
+	air_conditions BOOLEAN,
 	landlord_id UUID not null references landlord(id),
 	flor INTEGER,
-	numberOfFlors INTEGER,
+	number_of_flors INTEGER,
 	elevator BOOLEAN
 );
 CREATE TABLE house(
@@ -35,11 +35,11 @@ CREATE TABLE house(
 	neighborhood VARCHAR(255),
 	price INTEGER,
 	sqm INTEGER,
-	numberOfRooms INTEGER,
+	number_of_rooms INTEGER,
 	parking BOOLEAN,
-	airConditions BOOLEAN,
+	air_conditions BOOLEAN,
 	landlord_id UUID not null references landlord(id),
-	numberOfFlors INTEGER,
+	number_of_flors INTEGER,
 	garden BOOLEAN,
 	yard BOOLEAN
 );
